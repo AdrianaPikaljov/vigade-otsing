@@ -5,22 +5,24 @@ try:
     if type(a)== int and a>0:
         print("Õige number")
         S=a**2
+        print("Ruudu pindala", S)
+        P=4*a
+        print("Ruudu ümbermõõt", P) #oli kirjutatud valesti juttumargid
+        di=a*sqrt(2) #math oli vaja kustutada ja oigesti kirjutada sqrt
+        print("Ruudu diagonaal", round(di,2))
+        print()
     else:
         print("kirjutage number mitte taht")
-except:
+except ValueError: #proovisin valueerrori kasutada aga ei töötanud
     print("valed andmed")
-print("Ruudu pindala", S)
-P=4*a
-print("Ruudu ümbermõõt", P) #oli kirjutatud valesti juttumargid
-di=a*sqrt(2) #math oli vaja kustutada ja oigesti kirjutada sqrt
-print("Ruudu diagonaal", round(di,2))
-print()
+
+
 print("Ristküliku karakteristikud") #ekstra sulg 
 try:
     b=int(input("Sisesta ristküliku 1. külje pikkus => ")) #oli vaja lisada int 
     c=int(input("Sisesta ristküliku 2. külje pikkus => ")) #oli vaja lisada int 
     if type(b)== int and b>0 and type(c)== int and c>0:
-        print("Õige number")
+        print("Õigesti sisetud number")
         S=b*c
         print("Ristküliku pindala", S) #lisada sulud ja vahetada juttumargid
         P=2*(b+c) #puudus korrutamismärk
@@ -37,7 +39,7 @@ print("Ringi karakteristikud")
 try:
     r=float(input("Sisesta ringi raadiusi pikkus => ")) #valesti pandud juttumargid ja lisame float
     if type(r)== int and r>0:
-        print("Õige number")
+        print("Õigesti sisestatud number")
         d=2*r #kirjutame korrutamismärgi
         print("Ringi läbimõõt", d) #polnud koma märki
         S=pi*r**2 #kustutame sulud ja lisame astme märgi
@@ -46,6 +48,7 @@ try:
         print("Ringjoone pikkus", round(C)) #ei olnud viimast sulgu
     else:
         print("kirjutage andmed õigesti")
-exceptˇ:
+except:
     print("valed andmed")
+
 
