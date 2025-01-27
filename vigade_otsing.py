@@ -3,7 +3,7 @@ print("Ruudu karakteristikud")
 try:
     a=int(input('Sisesta ruudu külje pikkus => ')) #oli vaja lisada int
     if type(a)== int and a>0:
-        print("Õige number"
+        print("Õige number")
         S=a**2
     else:
         print("kirjutage number mitte taht")
@@ -34,10 +34,18 @@ except:
     print("valed andmed")
 
 print("Ringi karakteristikud")
-r=float(input("Sisesta ringi raadiusi pikkus => ")) #valesti pandud juttumargid ja lisame float
-d=2*r #kirjutame korrutamismärgi
-print("Ringi läbimõõt", d) #polnud koma märki
-S=pi*r**2 #kustutame sulud ja lisame astme märgi
-print("Ringi pindala", round(S))
-C=2*pi*r #kustutame sulud ja lisame korrutis märgi
-print("Ringjoone pikkus", round(C)) #ei olnud viimast sulgu
+try:
+    r=float(input("Sisesta ringi raadiusi pikkus => ")) #valesti pandud juttumargid ja lisame float
+    if type(r)== int and r>0:
+        print("Õige number")
+        d=2*r #kirjutame korrutamismärgi
+        print("Ringi läbimõõt", d) #polnud koma märki
+        S=pi*r**2 #kustutame sulud ja lisame astme märgi
+        print("Ringi pindala", round(S))
+        C=2*pi*r #kustutame sulud ja lisame korrutis märgi
+        print("Ringjoone pikkus", round(C)) #ei olnud viimast sulgu
+    else:
+        print("kirjutage andmed õigesti")
+exceptˇ:
+    print("valed andmed")
+
